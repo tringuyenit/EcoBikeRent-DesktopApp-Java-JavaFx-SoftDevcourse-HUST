@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="840.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="se.project.controller.station.StationController">
+   <children>
+      <ScrollPane layoutX="96.0" layoutY="68.0" prefHeight="502.0" prefWidth="660.0">
+         <content>
+            <FlowPane fx:id="itemFlow" prefHeight="500.0" prefWidth="661.0" />
+         </content>
+      </ScrollPane>
+      <AnchorPane layoutX="-4.0" prefHeight="64.0" prefWidth="848.0" style="-fx-background-color: #5aebad;">
+         <children>
+            <Button fx:id="btnBack" layoutX="26.0" layoutY="19.0" mnemonicParsing="false" onMouseClicked="#back" text="Back" />
+            <Label fx:id="storeText" alignment="CENTER" contentDisplay="CENTER" layoutX="168.0" layoutY="4.0" prefHeight="55.0" prefWidth="526.0" text="All Store" textAlignment="CENTER">
+               <font>
+                  <Font name="Segoe UI Black" size="38.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</Pane>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="840.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="se.project.controller.home.rentdetails.RentDetailsController">
+   <children>
+      <AnchorPane layoutX="-3.0" prefHeight="64.0" prefWidth="848.0" style="-fx-background-color: #5aebad;">
+         <children>
+            <Label layoutX="351.0" layoutY="1.0" prefHeight="62.0" prefWidth="170.0" text="Your Bike" textFill="WHITE">
+               <font>
+                  <Font size="38.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnBack" layoutX="26.0" layoutY="19.0" mnemonicParsing="false" onMouseClicked="#back" text="Back" />
+         </children>
+      </AnchorPane>
+      <Pane layoutX="82.0" layoutY="127.0" prefHeight="242.0" prefWidth="676.0" style="-fx-border-color: grey;">
+         <children>
+            <VBox layoutX="25.0" layoutY="88.0" prefHeight="114.0" prefWidth="100.0" style="-fx-spacing: 8;">
+               <children>
+                  <Label prefHeight="30.0" prefWidth="106.0" text="Total time">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="30.0" prefWidth="77.0" text="Deposit">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="30.0" prefWidth="106.0" text="Total">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox layoutX="154.0" layoutY="88.0" prefHeight="114.0" prefWidth="100.0">
+               <children>
+                  <Label fx:id="totalTime" prefHeight="35.0" prefWidth="100.0" text="2:30">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="deposit" prefHeight="35.0" prefWidth="103.0" text="400 000 d">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="totalMoney" prefHeight="35.0" prefWidth="102.0" text="30000 d" textFill="RED">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <HBox layoutX="325.0" layoutY="29.0" prefHeight="30.0" prefWidth="337.0">
+               <children>
+                  <Label prefHeight="30.0" prefWidth="106.0" text="Time rent">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="time" prefHeight="30.0" prefWidth="228.0" text="17:53 -17/10/2021">
+                     <font>
+                        <Font name="Segoe UI Black" size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <VBox layoutX="396.0" layoutY="59.0" prefHeight="173.0" prefWidth="131.0">
+               <children>
+                  <ImageView fx:id="bikeImg" fitHeight="131.0" fitWidth="143.0">
+                     <image>
+                        <Image url="@../image/Bicycle-icon.png" />
+                     </image>
+                  </ImageView>
+                  <Text fx:id="bikeName" strokeType="OUTSIDE" strokeWidth="0.0" text="Kona" textAlignment="CENTER" wrappingWidth="143.3773193359375">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </VBox>
+            <HBox layoutX="25.0" layoutY="29.0" prefHeight="26.0" prefWidth="200.0" style="-fx-spacing: 25;">
+               <children>
+                  <Label prefHeight="30.0" prefWidth="142.0" text="Order Code">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="orderCode" prefHeight="35.0" prefWidth="100.0" text="1" textFill="#4040ffee">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <ChoiceBox fx:id="choice" layoutX="154.0" layoutY="202.0" prefHeight="26.0" prefWidth="136.0" />
+            <Label layoutX="25.0" layoutY="200.0" text="Store Return">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Button fx:id="returnBtn" layoutX="547.0" layoutY="410.0" mnemonicParsing="false" onMouseClicked="#returnBike" prefHeight="25.0" prefWidth="106.0" style="-fx-background-color: red;" text="Return Bike" textFill="WHITE" />
+      <Button layoutX="171.0" layoutY="410.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="93.0" text="Refresh">
+         <graphic>
+            <ImageView fitHeight="21.0" fitWidth="28.0">
+               <image>
+                  <Image url="@../../image/reload.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+   </children>
+</AnchorPane>

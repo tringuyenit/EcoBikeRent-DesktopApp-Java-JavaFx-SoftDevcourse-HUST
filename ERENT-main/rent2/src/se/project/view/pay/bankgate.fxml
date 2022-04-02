@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="618.0" prefWidth="480.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="se.project.controller.pay.BankGateController">
+   <children>
+      <AnchorPane layoutX="-2.0" prefHeight="78.0" prefWidth="480.0" style="-fx-background-color: #448dee;">
+         <children>
+            <Button fx:id="backButton" layoutX="28.0" layoutY="27.0" mnemonicParsing="false" onMouseClicked="#back" text="Back" />
+            <Label layoutX="178.0" layoutY="22.0" text="Bank Gateway" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="98.0" layoutY="100.0" prefHeight="282.0" prefWidth="306.0" style="-fx-border-color: #DCDCDC;">
+         <children>
+            <Label layoutX="43.0" layoutY="29.0" text="Card num" />
+            <TextField fx:id="cardNum" layoutX="43.0" layoutY="55.0" prefHeight="25.0" prefWidth="218.0" promptText="Enter card number" />
+            <TextField fx:id="name" layoutX="41.0" layoutY="109.0" prefHeight="17.0" prefWidth="218.0" promptText="Enter your name" />
+            <Label layoutX="43.0" layoutY="92.0" text="Name" />
+            <Label layoutX="43.0" layoutY="147.0" text="Issuing bank" />
+            <TextField fx:id="bank" layoutX="41.0" layoutY="171.0" prefHeight="17.0" prefWidth="218.0" promptText="Enter your bank" />
+            <Label layoutX="43.0" layoutY="206.0" text="Expire date" />
+            <DatePicker fx:id="date" layoutX="41.0" layoutY="231.0" />
+         </children>
+      </Pane>
+      <TextArea fx:id="messageA" layoutX="98.0" layoutY="415.0" prefHeight="135.0" prefWidth="306.0" promptText="Transaction Information" />
+      <Label layoutX="98.0" layoutY="397.0" prefHeight="18.0" prefWidth="59.0" text="Message" />
+      <Button fx:id="payBtn" layoutX="181.0" layoutY="566.0" mnemonicParsing="false" onMouseClicked="#pay" prefHeight="35.0" prefWidth="140.0" style="-fx-background-color: #448dee;" text="Pay" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

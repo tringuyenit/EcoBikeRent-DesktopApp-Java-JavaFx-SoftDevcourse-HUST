@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="206.0" prefWidth="383.0" style="-fx-background-color: #cc8d49;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="se.project.controller.station.ConfirmController">
+   <children>
+      <ImageView fitHeight="300.0" fitWidth="383.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@stick.jpg" />
+         </image>
+      </ImageView>
+      <HBox prefHeight="206.0" prefWidth="383.0">
+         <children>
+            <Pane prefHeight="200.0" prefWidth="210.0" />
+            <VBox alignment="CENTER" prefHeight="206.0" prefWidth="153.0" spacing="20.0">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@ques.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets top="40.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <Label text="Confirm your choice">
+                     <font>
+                        <Font name="Cartograph CF Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                     <children>
+                        <Button id="button" fx:id="yesbtn" mnemonicParsing="false" onMouseClicked="#yes" style="-fx-background-color: #1b8716;" text="Yes">
+                           <font>
+                              <Font name="Cartograph CF Bold" size="16.0" />
+                           </font>
+                        </Button>
+                        <Button id="button" fx:id="backbtn" mnemonicParsing="false" onMouseClicked="#back" style="-fx-background-color: #ba2a0d;" text="Back" textFill="#262626">
+                           <font>
+                              <Font name="Cartograph CF Bold" size="16.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

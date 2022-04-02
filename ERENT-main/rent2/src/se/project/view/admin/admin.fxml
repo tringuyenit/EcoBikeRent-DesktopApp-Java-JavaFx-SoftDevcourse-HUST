@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="745.0" prefWidth="900.0" style="-fx-background-color: #d7dcdd;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="se.project.controller.home.admin.AdminController">
+   <children>
+      <Label alignment="CENTER" layoutX="253.0" layoutY="28.0" prefHeight="62.0" prefWidth="422.0" text="Admin EBike" textAlignment="CENTER" textFill="#727272">
+         <font>
+            <Font name="Couture-Bold" size="32.0" />
+         </font>
+      </Label>
+      <TabPane layoutX="4.0" layoutY="129.0" prefHeight="587.0" prefWidth="894.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab fx:id="transactionTab" text="Transactions">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="purchaseTableView" layoutX="14.0" layoutY="9.0" prefHeight="363.0" prefWidth="422.0" tableMenuButtonVisible="true">
+                          <columns>
+                            <TableColumn fx:id="purchaseIDCol" prefWidth="70.0" text="Order ID" />
+                            <TableColumn fx:id="purchaseNameCol" prefWidth="106.0" text="Customer ID" />
+                              <TableColumn fx:id="purchaseDateCol" prefWidth="127.0" text="Date" />
+                              <TableColumn fx:id="purchasePriceCol" prefWidth="118.0" text="Price" />
+                          </columns>
+                        </TableView>
+                        <Button layoutX="507.0" layoutY="138.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="150.0" text="View Current Transaction" />
+                        <TextField fx:id="customerID" alignment="TOP_CENTER" layoutX="507.0" layoutY="94.0" prefHeight="25.0" prefWidth="150.0" promptText="Customer ID" />
+                        <Button fx:id="viewAll" layoutX="507.0" layoutY="180.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="150.0" text="View All" />
+                        <DatePicker fx:id="datePicker" editable="false" layoutX="495.0" layoutY="47.0" promptText="2017/08/31" />
+                        <Button layoutX="507.0" layoutY="280.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="150.0" text="View Report" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+          <Tab fx:id="customerTab" text="Customers">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="customerTableView" layoutX="14.0" layoutY="12.0" prefHeight="358.0" prefWidth="490.0" tableMenuButtonVisible="true">
+                          <columns>
+                            <TableColumn fx:id="customerIdCol" prefWidth="59.0" text="ID" />
+                            <TableColumn fx:id="customerNameCol" prefWidth="91.0" text="Name" />
+                              <TableColumn fx:id="customerAddCol" prefWidth="115.0" text="Address" />
+                              <TableColumn fx:id="customerUserNameCol" prefWidth="96.0" text="Email" />
+                              <TableColumn fx:id="customerPassCol" prefWidth="115.0" text="Password" />
+                          </columns>
+                        </TableView>
+                        <Button layoutX="564.0" layoutY="37.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="99.0" text="Add " />
+                        <Button layoutX="564.0" layoutY="118.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="99.0" style="-fx-background-color: #ff4444;" text="Remove" />
+                        <Button layoutX="564.0" layoutY="78.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="99.0" text="Update" />
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="539.0" layoutY="184.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Documents/GitHub/OnlineShopping/src/Store/productPics/icons/graph_318-10306.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="staffTab" closable="false" text="Store">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="270.0" prefWidth="438.0">
+                     <children>
+                        <Button layoutX="462.0" layoutY="154.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="99.0" text="Add " />
+                        <Button layoutX="580.0" layoutY="154.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="99.0" style="-fx-background-color: #ff4444;" text="Remove" />
+                        <Button layoutX="512.0" layoutY="323.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="90.0" text="Update" />
+                        <TextField fx:id="addUserText" layoutX="462.0" layoutY="73.0" prefHeight="25.0" prefWidth="215.0" promptText="Username" />
+                        <TextField fx:id="addPassText" layoutX="462.0" layoutY="111.0" prefHeight="25.0" prefWidth="214.0" promptText="Password" />
+                        <TableView fx:id="bikeTable" layoutX="14.0" layoutY="30.0" prefHeight="235.0" prefWidth="415.0" style="-fx-border-radius: 10 10 0 0;">
+                           <columns>
+                              <TableColumn fx:id="bikeName" prefWidth="90.39999580383301" style="-fx-alignment: center;" text="Name" />
+                              <TableColumn fx:id="bikeType" prefWidth="87.20000457763672" style="-fx-alignment: center;" text="Type" />
+                              <TableColumn fx:id="bikeManu" prefWidth="84.800048828125" style="-fx-alignment: center;" text="Manufacture" />
+                              <TableColumn fx:id="bikeProducer" prefWidth="67.20001220703125" style="-fx-alignment: center;" text="Producer" />
+                              <TableColumn fx:id="bikeCost" minWidth="0.0" prefWidth="84.79998779296875" style="-fx-alignment: center;" text="Cost" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="productsTab" closable="false" text="Bike">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="421.0" prefWidth="894.0">
+                     <children>
+                        <Button layoutX="389.0" layoutY="336.0" mnemonicParsing="false" onAction="#add" prefHeight="28.0" prefWidth="99.0" text="Add " />
+                        <Button layoutX="715.0" layoutY="336.0" mnemonicParsing="false" onAction="#remove" prefHeight="28.0" prefWidth="99.0" style="-fx-background-color: #ff4444;" text="Remove" />
+                        <Button layoutX="595.0" layoutY="336.0" mnemonicParsing="false" onAction="#update" prefHeight="28.0" prefWidth="99.0" text="Update" />
+                        <TableView fx:id="bikeTable" layoutX="26.0" layoutY="14.0" prefHeight="284.0" prefWidth="798.0" style="-fx-border-radius: 10 10 0 0;">
+                           <columns>
+                              <TableColumn fx:id="idCol" prefWidth="60.000001430511475" style="-fx-alignment: center;" text="Id" />
+                              <TableColumn fx:id="storeIdCol" prefWidth="62.399993896484375" style="-fx-alignment: center;" text="StoreId" />
+                              <TableColumn fx:id="nameCol" prefWidth="87.19998168945312" style="-fx-alignment: center;" text="Name" />
+                              <TableColumn fx:id="typeCol" prefWidth="79.20001220703125" style="-fx-alignment: center;" text="Type" />
+                              <TableColumn fx:id="weightCol" minWidth="0.0" prefWidth="88.79998779296875" style="-fx-alignment: center;" text="Weight" />
+                              <TableColumn fx:id="licenseCol" prefWidth="83.2000732421875" style="-fx-alignment: center;" text="License" />
+                              <TableColumn fx:id="manuCol" prefWidth="83.2000732421875" style="-fx-alignment: center;" text="Manufacture" />
+                              <TableColumn fx:id="producerCol" prefWidth="83.2000732421875" style="-fx-alignment: center;" text="Producer" />
+                              <TableColumn fx:id="costCol" prefWidth="83.2000732421875" style="-fx-alignment: center;" text="Cost" />
+                              <TableColumn fx:id="statusCol" prefWidth="83.2000732421875" style="-fx-alignment: center;" text="Status" />
+                           </columns>
+                        </TableView>
+                        <VBox layoutX="26.0" layoutY="316.0" prefHeight="150.0" prefWidth="148.0" style="-fx-spacing: 4;">
+                           <children>
+                              <Label layoutX="10.0" layoutY="196.0" text="Bike ID">
+                                 <font>
+                                    <Font name="Segoe UI Black" size="10.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="id" alignment="TOP_CENTER" prefHeight="25.0" prefWidth="150.0" promptText="Bike ID" />
+                              <Label prefHeight="15.0" prefWidth="57.0" text="Store ID">
+                                 <font>
+                                    <Font name="Segoe UI Black" size="10.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="storeId" alignment="TOP_CENTER" prefHeight="25.0" prefWidth="150.0" promptText="Store ID" />
+                              <Label layoutX="10.0" layoutY="196.0" text="Name">
+                                 <font>
+                                    <Font name="Segoe UI Black" size="10.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="name" alignment="TOP_CENTER" prefHeight="25.0" prefWidth="150.0" promptText="Name" />
+                              <Label layoutX="10.0" layoutY="177.0" text="Type">
+                                 <font>
+                                    <Font name="Segoe UI Black" size="10.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="type" alignment="TOP_CENTER" prefHeight="25.0" prefWidth="150.0" promptText="Type" />
+                              <Label layoutX="10.0" layoutY="40.0" text="Weight">
+                                 <font>
+                                    <Font name="Segoe UI Black" size="10.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="weight" alignment="TOP_CENTER" prefHeight="25.0" prefWidth="150.0" promptText="Weight" />
+                           </children>
+                        </VBox>
+                        <VBox layoutX="193.0" layoutY="316.0" prefHeight="150.0" prefWidth="148.0" style="-fx-spacing: 4;">
+                           <children>
+                              <Label layoutX="10.0" layoutY="177.0" text="License">
+                                 <font>
+                                    <Font name="Segoe UI Black" size="10.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="license" alignment="TOP_CENTER" prefHeight="25.0" prefWidth="150.0" promptText="License" />
+                              <Label layoutX="10.0" layoutY="177.0" text="Manufacture">
+                                 <font>
+                                    <Font name="Segoe UI Black" size="10.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="manufacture" alignment="TOP_CENTER" prefHeight="25.0" prefWidth="150.0" promptText="Manufacture" />
+                              <Label layoutX="10.0" layoutY="177.0" text="Producer">
+                                 <font>
+                                    <Font name="Segoe UI Black" size="10.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="producer" alignment="TOP_CENTER" prefHeight="25.0" prefWidth="150.0" promptText="Producer" />
+                              <Label layoutX="10.0" layoutY="158.0" text="Cost">
+                                 <font>
+                                    <Font name="Segoe UI Black" size="10.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="cost" alignment="TOP_CENTER" prefHeight="25.0" prefWidth="150.0" promptText="Cost" />
+                              <Label text="Status">
+                                 <font>
+                                    <Font name="Segoe UI Black" size="10.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="status" alignment="TOP_CENTER" prefHeight="25.0" prefWidth="150.0" promptText="Status" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Label fx:id="usernameLabel" layoutX="764.0" layoutY="15.0" prefHeight="25.0" prefWidth="52.0" text="Admin" />
+      <ImageView fitHeight="38.0" fitWidth="33.0" layoutX="716.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Documents/GitHub/OnlineShopping/src/Store/productPics/icons/img_568657.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnSignOut" layoutX="816.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#logOut" text="Logout" />
+  
+   </children>
+</AnchorPane>

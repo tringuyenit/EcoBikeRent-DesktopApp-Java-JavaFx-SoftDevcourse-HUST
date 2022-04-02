@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="925.0" style="-fx-background-color: #cc8d49;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="se.project.controller.home.rentdetails.RentDetailsController">
+   <children>
+      <HBox prefHeight="590.0" prefWidth="925.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="590.0" prefWidth="325.0" spacing="30.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fx:id="bikeImg" fitHeight="296.0" fitWidth="318.0" pickOnBounds="true" preserveRatio="true" />
+                     </children></HBox>
+                  <Button id="back" fx:id="btnBack" alignment="CENTER" contentDisplay="CENTER" layoutX="40.0" layoutY="482.0" mnemonicParsing="false" onMouseClicked="#back" prefHeight="48.0" prefWidth="115.0" text="Back" textFill="#fffefe">
+                     <font>
+                        <Font name="Cartograph CF Bold" size="24.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Button>
+                  <Button id="preparereturn" alignment="CENTER" contentDisplay="CENTER" layoutX="116.0" layoutY="484.0" mnemonicParsing="false" onMouseClicked="#returnBike" prefHeight="48.0" prefWidth="239.0" text="Prepare return" textFill="#fffefe">
+                     <font>
+                        <Font name="Cartograph CF Bold" size="24.0" />
+                     </font>
+                  </Button>
+               </children></VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="600.0" style="-fx-background-color: #333;">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="Bike info" textFill="#cc8d49">
+                     <font>
+                        <Font name="Cartograph CF Bold" size="42.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="20.0" />
+                     </padding>
+                  </Label>
+                  <GridPane alignment="CENTER" hgap="20.0" prefHeight="165.0" prefWidth="600.0" vgap="50.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="294.199951171875" minWidth="10.0" prefWidth="279.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="370.2000122070312" minWidth="10.0" prefWidth="301.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="5.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="10.0" minHeight="0.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="10.0" minHeight="0.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="10.0" minHeight="0.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="20.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefWidth="300.0" text="Type :" textFill="WHITE" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Cartograph CF Bold" size="37.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="bikeType" contentDisplay="CENTER" layoutX="10.0" layoutY="-4.0" prefHeight="105.0" prefWidth="325.0" text="Single" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Cartograph CF Bold Italic" size="37.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="309.0" layoutY="-4.0" prefWidth="300.0" text="Weight :" textFill="WHITE" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Cartograph CF Bold" size="37.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="bikeWeight" contentDisplay="CENTER" layoutX="238.0" layoutY="157.0" prefWidth="400.0" text="2.5 kg" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Cartograph CF Bold Italic" size="37.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="10.0" layoutY="153.0" prefHeight="59.0" prefWidth="297.0" text="Producer:" textFill="WHITE" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="Cartograph CF Bold" size="37.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="10.0" layoutY="186.0" prefHeight="59.0" prefWidth="297.0" text="Cost :" textFill="WHITE" GridPane.rowIndex="4">
+                           <font>
+                              <Font name="Cartograph CF Bold" size="37.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="bikeProducer" contentDisplay="CENTER" layoutX="285.0" layoutY="104.0" prefWidth="400.0" text="Italy" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="Cartograph CF Bold Italic" size="37.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="bikeCost" contentDisplay="CENTER" layoutX="285.0" layoutY="203.0" prefWidth="400.0" text="2300" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <font>
+                              <Font name="Cartograph CF Bold Italic" size="37.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="10.0" layoutY="74.0" prefWidth="300.0" text="Name :" textFill="WHITE">
+                           <font>
+                              <Font name="Cartograph CF Bold" size="37.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="bikeName" contentDisplay="CENTER" layoutX="285.0" layoutY="74.0" prefHeight="105.0" prefWidth="325.0" text="Future bike" textFill="WHITE" GridPane.columnIndex="1">
+                           <font>
+                              <Font name="Cartograph CF Bold Italic" size="37.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="10.0" />
+                     </VBox.margin>
+                  </GridPane>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="189.0" layoutY="116.0" prefHeight="52.0" prefWidth="379.0" text="Rent status" textFill="#cc8d49">
+                     <font>
+                        <Font name="Cartograph CF Bold" size="42.0" />
+                     </font>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </Label>
+                  <GridPane alignment="CENTER" hgap="20.0" layoutX="10.0" layoutY="264.0" prefHeight="161.0" prefWidth="600.0" vgap="20.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="306.0" minWidth="10.0" prefWidth="282.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="370.2000122070312" minWidth="10.0" prefWidth="298.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="54.0" minHeight="0.0" prefHeight="24.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="101.0" minHeight="3.0" prefHeight="23.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="68.0" minHeight="0.0" prefHeight="24.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="54.0" minHeight="10.0" prefHeight="22.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label alignment="BOTTOM_RIGHT" contentDisplay="CENTER" prefWidth="300.0" text="Time spent :" textFill="WHITE" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Cartograph CF Bold" size="27.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="totalTime" contentDisplay="CENTER" layoutX="10.0" layoutY="-4.0" prefWidth="400.0" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Cartograph CF Bold Italic" size="27.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="309.0" layoutY="-4.0" prefWidth="300.0" text="Current fee :" textFill="WHITE" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Cartograph CF Bold" size="27.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="10.0" layoutY="-4.0" prefWidth="300.0" text="Balance :" textFill="WHITE" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="Cartograph CF Bold" size="27.0" />
+                           </font>
+                        </Label>
+                        <Label contentDisplay="CENTER" layoutX="238.0" layoutY="-4.0" prefWidth="400.0" text="1 234 009 vnđ" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="Cartograph CF Bold Italic" size="27.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="totalMoney" contentDisplay="CENTER" layoutX="238.0" layoutY="157.0" prefWidth="400.0" textFill="#c76060" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Cartograph CF Bold Italic" size="27.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="BOTTOM_RIGHT" contentDisplay="CENTER" layoutX="10.0" layoutY="59.0" prefWidth="300.0" text="Rent time&amp;date :" textFill="WHITE">
+                           <font>
+                              <Font name="Cartograph CF Bold" size="27.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="time" contentDisplay="CENTER" layoutX="301.0" layoutY="59.0" prefWidth="400.0" text="17:53 -17/10/2021" textFill="WHITE" GridPane.columnIndex="1">
+                           <font>
+                              <Font name="Cartograph CF Bold Italic" size="27.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </GridPane>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

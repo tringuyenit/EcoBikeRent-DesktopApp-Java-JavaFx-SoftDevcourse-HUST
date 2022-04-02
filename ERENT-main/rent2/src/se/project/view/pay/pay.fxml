@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane prefHeight="618.0" prefWidth="480.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="se.project.controller.pay.PayController">
+   <children>
+      <StackPane layoutY="53.0" prefHeight="564.0" prefWidth="480.0" style="-fx-border-color: grey;">
+         <children>
+            <Pane fx:id="payPane" prefHeight="637.0" prefWidth="478.0" style="-fx-background-color: white;">
+               <children>
+                  <Pane layoutX="-1.0" prefHeight="55.0" prefWidth="480.0" style="-fx-border-color: #DCDCDC;">
+                     <children>
+                        <Label fx:id="name" layoutX="53.0" layoutY="20.0" text="Dang Quoc Tu">
+                           <font>
+                              <Font name="Segoe UI Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="25.0" fitWidth="18.0" layoutX="23.0" layoutY="17.0">
+                           <image>
+                              <Image url="@../../../../../../Downloads/2828808.png" />
+                           </image>
+                        </ImageView>
+                     </children></Pane>
+                  <Pane layoutY="291.0" prefHeight="201.0" prefWidth="480.0" style="-fx-border-color: #DCDCDC;">
+                     <children>
+                        <Line endX="346.60003662109375" layoutX="116.0" layoutY="118.0" startX="-100.0" />
+                        <Label fx:id="total1" layoutX="344.0" layoutY="152.0" prefHeight="35.0" prefWidth="97.0" text="164.000 d">
+                           <font>
+                              <Font name="Segoe UI Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="20.0" layoutY="151.0" prefHeight="35.0" prefWidth="79.0" text="Total">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <VBox layoutX="20.0" layoutY="14.0" prefHeight="114.0" prefWidth="100.0">
+                           <children>
+                              <Label prefHeight="35.0" prefWidth="80.0" text="Deposit">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="35.0" prefWidth="154.0" text="Total time">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="35.0" prefWidth="126.0" text="Rent fee">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="343.0" layoutY="14.0" prefHeight="114.0" prefWidth="100.0">
+                           <children>
+                              <Label fx:id="deposit" prefHeight="35.0" prefWidth="100.0" text="164 000 d">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="time" prefHeight="35.0" prefWidth="103.0" text="0:00">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="rentFee" prefHeight="35.0" prefWidth="102.0" text="0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <Label layoutX="20.0" layoutY="119.0" prefHeight="35.0" prefWidth="85.0" text="Excess cash">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="excessCash" layoutX="342.0" layoutY="119.0" prefHeight="35.0" prefWidth="102.0" text="0">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutY="55.0" prefHeight="155.0" prefWidth="478.0" style="-fx-border-color: #DCDCDC;">
+                     <children>
+                        <ImageView fx:id="img" fitHeight="124.0" fitWidth="108.0" layoutX="95.0" layoutY="38.0">
+                           <image>
+                              <Image url="@../image/Bicycle-icon.png" />
+                           </image>
+                        </ImageView>
+                        <Text fx:id="bikeName" layoutX="258.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Asphalt Bike">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Label layoutX="27.0" layoutY="19.0" text="Bike Rent">
+                           <font>
+                              <Font name="Segoe UI Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <HBox layoutX="258.0" layoutY="100.0" prefHeight="35.0" prefWidth="214.0" style="-fx-spacing: 5;">
+                           <children>
+                              <Label fx:id="cost" prefHeight="35.0" prefWidth="54.0" text="3000">
+                                 <font>
+                                    <Font name="Segoe UI" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="d /hour">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                     </children>
+                  </Pane>
+                  <Button fx:id="rent" layoutX="240.0" layoutY="509.0" mnemonicParsing="false" onMouseClicked="#rentItem" prefHeight="40.0" prefWidth="208.0" style="-fx-background-color: red;" text="Pay" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="21.0" layoutY="492.0" prefHeight="35.0" prefWidth="73.0" text="Total">
+                     <font>
+                        <Font name="Segoe UI Black" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="total" layoutX="21.0" layoutY="527.0" prefHeight="35.0" prefWidth="108.0" text="164.000 d" textFill="RED">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutY="212.0" prefHeight="79.0" prefWidth="478.0" style="-fx-border-color: #DCDCDC;">
+                     <children>
+                        <Label layoutX="23.0" layoutY="9.0" text="Pay Method">
+                           <font>
+                              <Font name="Segoe UI Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <CheckBox fx:id="cash" layoutX="29.0" layoutY="37.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="80.0" text="Cash">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox fx:id="credit" layoutX="156.0" layoutY="37.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="118.0" text="Credit Card">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </CheckBox>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+      <Pane prefHeight="55.0" prefWidth="480.0" style="-fx-background-color: #448dee;">
+         <children>
+            <Button fx:id="backBtn" layoutX="20.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#back" text="Back" />
+            <Label layoutX="209.0" layoutY="5.0" text="Rent" textFill="WHITE">
+               <font>
+                  <Font size="31.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</Pane>

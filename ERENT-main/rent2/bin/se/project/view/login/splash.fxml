@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="600.0" style="-fx-background-color: #81c784;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="se.project.controller.login.SplashController">
+   <children>
+      <Label layoutX="170.0" layoutY="280.0" style="-fx-text-fill: #FFFFFFFF;" text="EBike Rental">
+         <font>
+            <Font name="Segoe UI" size="48.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="199.0" layoutY="72.0">
+         <image>
+            <Image url="@../../image/Bicycle-icon.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>

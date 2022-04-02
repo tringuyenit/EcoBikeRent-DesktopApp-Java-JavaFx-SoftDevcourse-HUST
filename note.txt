@@ -1,0 +1,1 @@
+create database named "ebike" and import the sql file

@@ -1,0 +1,11 @@
+
+W
+java:S1118":Add a private constructor to hide the implicit public one.(™í‡÷8½üÑïÑ/
+Z	java:S106!"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍşÿÿÿÿ8ƒıÑïÑ/
+K
+java:S1172'".Remove this unused method parameter "orderId".(—ºš’8¤ıÑïÑ/
+Q	java:S125,"<This block of commented-out lines of code should be removed.(ú¹§
+q
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(¯€˜øÿÿÿÿ8ÍÿÑïÑ/
+q
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ô­ôøÿÿÿÿ8ÍÿÑïÑ/
